@@ -50,8 +50,10 @@ const controlSize = (() => {
       _renderHeight = renderHeight
       _containerWidth = containerDiv.clientWidth
       _containerHeight = containerDiv.clientHeight
+      if (_surpass) {
+        canvasInitialized = true
+      }
       _surpass = false
-      canvasInitialized = true
     }
     else {
       return

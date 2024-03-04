@@ -1,9 +1,10 @@
 let objects = []
 
-const physicsLoop = (() => {
+const gameLoop = (() => {
   let timeNow = performance.now()
   let timeThen
   return async () => {
+    controlSize()
     timeThen = timeNow
     timeNow = performance.now()
     const delta = (timeNow - timeThen) / 1000
@@ -15,15 +16,4 @@ const physicsLoop = (() => {
   }
 })()
 
-async function renderLoop() {
-  controlSize()
-  for (const object of objects) {
-    if (object.draw) {
-      await object.draw()
-    }
-  }
-  requestAnimationFrame(renderLoop)
-}
-
-setInterval(physicsLoop, 16)
-renderLoop()
+setInterval(gameLoop, 16)
