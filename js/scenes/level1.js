@@ -1,5 +1,12 @@
 const LEVEL1 = () => [
   [
+    'background',
+    [{
+      backgroundColor: 'cornflowerblue'
+    }]
+  ],
+
+  [
     'player',
     [
       vec2(64, 700),

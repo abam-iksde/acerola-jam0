@@ -116,15 +116,17 @@ function createLabel(position, scale, rotation, alignment, text) {
   return createNodeWith(position, scale, rotation, alignment, component)
 }
 
-function createImageWithRawSource(position, scale, rotation, alignment, src) {
+function createImageWithRawSource(position, scale, rotation, alignment, src, onClick=undefined) {
   const component = document.createElement('img')
   component.src = src
+
+  onClick && (component.onclick = onClick)
 
   return createNodeWith(position, scale, rotation, alignment, component)
 }
 
-function createImage(position, scale, rotation, alignment, image) {
-  return createImageWithRawSource(position, scale, rotation, alignment, imageMap[image])
+function createImage(position, scale, rotation, alignment, image, onClick=undefined) {
+  return createImageWithRawSource(position, scale, rotation, alignment, imageMap[image], onClick)
 }
 
 function createTextfield(position, scale, rotation, alignment, defaultValue, onChange=undefined, changeOnStart=false) {
@@ -138,4 +140,21 @@ function createTextfield(position, scale, rotation, alignment, defaultValue, onC
   }
 
   return createNodeWith(position, scale, rotation, alignment, component)
+}
+
+function createBackground(style) {
+  const component = document.createElement('div')
+  assignStyle(component, {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    ...style
+  })
+
+  gameDiv.appendChild(component)
+
+  return {
+    component,
+    _recalcTransform: () => {}
+  }
 }

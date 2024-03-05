@@ -23,7 +23,9 @@ async function loadImages(map) {
 const imageMap = {
   'player': 'graphics/player.png',
   'floor_lv1': 'graphics/floor_lv1.png',
-  'target': 'graphics/target.png'
+  'target': 'graphics/target.png',
+  'card_reverse': 'graphics/card_reverse.png',
+  'card_1': 'graphics/card_1.png'
 }
 
 let images

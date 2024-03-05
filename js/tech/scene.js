@@ -56,3 +56,4 @@ function testWallCollision(pos, size) {
 registerClass('image', createImage)
 registerClass('rawImage', createImageWithRawSource)
 registerClass('textfield', createTextfield)
+registerClass('background', createBackground)
