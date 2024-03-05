@@ -158,3 +158,27 @@ function createBackground(style) {
     _recalcTransform: () => {}
   }
 }
+
+function createTextArea(position, scale, rotation, alignment, size, defaultValue, onChange=undefined, changeOnStart=false) {
+  const component = document.createElement('textarea')
+
+  component.value = defaultValue
+  component.cols = size.x
+  component.rows = size.y
+  if (onChange) {
+    changeOnStart && onChange(defaultValue)
+    component.onchange((event) => {
+      onChange(event.target.value)
+    })
+  }
+
+  const result = createNodeWith(position, scale, rotation, alignment, component)
+  let width = component.clientWidth
+  let height = component.clientHeight
+  result.update = () => {
+    if (component.clientWidth !== width || component.clientHeight !== height) {
+      result._recalcTransform()
+    }
+  }
+  return result
+}

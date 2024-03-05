@@ -39,11 +39,11 @@ const controlSize = (() => {
     const aspect = containerDiv.clientWidth / containerDiv.clientHeight
     const stretchMode = (aspect < renderWidth / renderHeight)
     if (
-      _stretchMode != stretchMode
-      || _renderWidth != renderWidth
-      || _renderHeight != renderHeight
-      || _containerWidth != containerDiv.clientWidth
-      || _containerHeight != containerDiv.clientHeight
+      _stretchMode !== stretchMode
+      || _renderWidth !== renderWidth
+      || _renderHeight !== renderHeight
+      || _containerWidth !== containerDiv.clientWidth
+      || _containerHeight !== containerDiv.clientHeight
       || _surpass) {
       _stretchMode = stretchMode
       _renderWidth = renderWidth
