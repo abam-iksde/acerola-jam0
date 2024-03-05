@@ -29,6 +29,24 @@ registerClass('card_covered', (position) => {
   return image
 })
 
+registerClass('hint_button', () => {
+  const button = createButton(vec2(1500, 300), vec2(3, 3), 0, { horizontal: 'end', vertical: 'end' }, 'show hint', () => {
+    const hint = objRefs['hint_label']
+    if (!hint.shown) {
+      hint.scale = vec2(2, 2)
+      button.component.textContent = 'hide hint'
+      hint.shown = true
+    }
+    else {
+      hint.scale = vec2(0, 0)
+      button.component.textContent = 'show hint'
+      hint.shown = false
+    }
+  })
+
+  return button
+})
+
 registerClass('memory_win_label', () => {
   const label = registeredClasses['colored_label'](
     vec2(800, 900),
@@ -121,4 +139,22 @@ const LEVEL_MEMORY = () => [
     [],
     'label_win'
   ],
+  ['hint_button', []],
+  [
+    'colored_label',
+    [
+      vec2(1500, 300),
+      vec2(2, 0),
+      0,
+      {horizontal: 'end', vertical: 'start'},
+      memoryHint,
+      'white'
+    ],
+    'hint_label'
+  ],
 ]
+
+const memoryHint = `
+  You can use a paper sheet to take<br/>
+  not of the cards you've previously revealed!
+`
