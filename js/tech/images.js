@@ -26,7 +26,8 @@ const imageMap = {
   'target': 'graphics/target.png',
   'card_reverse': 'graphics/card_reverse.png',
   'card_1': 'graphics/card_1.png',
-  'platform': 'graphics/platform.png'
+  'platform': 'graphics/platform.png',
+  'background_lv2': 'graphics/background_lv2.png',
 }
 
 let images
