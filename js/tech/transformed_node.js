@@ -182,3 +182,18 @@ function createTextArea(position, scale, rotation, alignment, size, defaultValue
   }
   return result
 }
+
+function createSlider(position, scale, rotation, alignment, valueRange, defaultValue, onChange=undefined, changeOnStart=false) {
+  const component = document.createElement('input');
+  component.type = 'range'
+  component.min = valueRange.x
+  component.max = valueRange.y
+  component.value = defaultValue
+  
+  if (onChange) {
+    component.onchange = (event) => onChange(event.target.value)
+    changeOnStart && onChange(defaultValue)
+  }
+  
+  return createNodeWith(position, scale, rotation, alignment, component)
+}
