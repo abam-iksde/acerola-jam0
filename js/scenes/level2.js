@@ -1,5 +1,12 @@
 const LEVEL2 = () => [
   [
+    'background',
+    [{
+      backgroundImage: 'url("graphics/background_lv2.png")',
+      backgroundRepeat: 'repeat',
+    }]
+  ],
+  [
     'player',
     [
       vec2(64, 700),
