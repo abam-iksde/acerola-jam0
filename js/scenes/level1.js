@@ -1,4 +1,4 @@
-const LEVEL1 = () => [
+const LEVEL1 = () => (controls.jump = '',[
   [
     'background',
     [{
@@ -94,4 +94,4 @@ const LEVEL1 = () => [
       true,
     ]
   ],
-]
+])
