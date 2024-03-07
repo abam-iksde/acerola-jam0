@@ -56,6 +56,9 @@ registerClass('player_position_slider', (...args) => {
   const slider = createSlider(...args)
   slider.update = () => {
     const { player } = objRefs
+    if (!player) {
+      return
+    }
     player.movementAccumulator.x = slider.component.value - player.position.x
   }
   return slider

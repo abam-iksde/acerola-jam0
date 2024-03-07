@@ -1,4 +1,4 @@
-const LEVEL1 = () => (controls.jump = '',[
+const LEVEL1 = () => (controls.jump = '', [
   [
     'background',
     [{

@@ -8,7 +8,7 @@ const levels = [
 ]
 
 function loadingLabel(...args) {
-  const label = createLabel(...args, 'Loading...')
+  const label = createLabel(...args, 'Loading')
   assignStyle(label.component, {
     color: 'white'
   })
@@ -20,8 +20,16 @@ function loadingLabel(...args) {
     loaded = true
   })
 
+  let animationState = 0
+
+  const timer = setInterval(() => {
+    animationState = (animationState + 1) % 3
+    label.component.textContent = `Loading${Array.from({length: animationState}).fill('.').join('')}`
+    label._recalcTransform()
+  }, 100)
+
   label.update = () => {
-    loaded && canvasInitialized && loadScene(levels[0])
+    loaded && canvasInitialized && (clearInterval(timer), loadScene(levels[0]))
   }
 
   return label
