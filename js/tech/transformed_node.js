@@ -184,7 +184,7 @@ function createTextArea(position, scale, rotation, alignment, size, defaultValue
 }
 
 function createSlider(position, scale, rotation, alignment, valueRange, defaultValue, onChange=undefined, changeOnStart=false) {
-  const component = document.createElement('input');
+  const component = document.createElement('input')
   component.type = 'range'
   component.min = valueRange.x
   component.max = valueRange.y
@@ -193,6 +193,33 @@ function createSlider(position, scale, rotation, alignment, valueRange, defaultV
   if (onChange) {
     component.onchange = (event) => onChange(event.target.value)
     changeOnStart && onChange(defaultValue)
+  }
+  
+  return createNodeWith(position, scale, rotation, alignment, component)
+}
+
+function createDiv(position, scale, rotation, alignment, size={}, style=vec2(64, 64), htmlContent='') {
+  const component = document.createElement('div')
+  assignStyle(component, {
+    ...style,
+    width: `${size.x}px`,
+    height: `${size.y}px`,
+  })
+  component.innerHTML = htmlContent
+  
+  return createNodeWith(position, scale, rotation, alignment, component)
+}
+
+function createCheckbox(position, scale, rotation, alignment, checked, onChange = undefined, changeOnStart = false) {
+  const component = document.createElement('input')
+  component.type = 'checkbox'
+  component.checked = checked
+  
+  if (onChange) {
+    component.onchange = (event) => onChange(event.target.checked)
+    if (changeOnStart) {
+      onChange(checked)
+    }
   }
   
   return createNodeWith(position, scale, rotation, alignment, component)

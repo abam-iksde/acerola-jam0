@@ -10,7 +10,7 @@ const LEVEL4 = () => [
   [
     'player',
     [
-      vec2(0, 100),
+      vec2(0, 600),
       vec2(1, 1),
       0,
       {vertical: 'start', horizontal: 'start'},
