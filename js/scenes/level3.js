@@ -29,7 +29,7 @@ const LEVEL3 = () => [
       0,
       { horizontal: 'start', vertical: 'start' },
       vec2(30,2),
-      'hello world'
+      'bottom text'
     ]
   ],
   [
@@ -40,7 +40,7 @@ const LEVEL3 = () => [
       0,
       { horizontal: 'start', vertical: 'start' },
       vec2(30,2),
-      'yea'
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor sed turpis sit amet maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer posuere varius interdum. Donec pharetra tellus elit, vitae fermentum lectus porta scelerisque. Phasellus dapibus, nunc eu ultricies interdum, tortor eros vehicula sapien, vitae cursus lacus diam et nulla. Vivamus leo nisl, tempus blandit nisl in, ultricies finibus lorem. Aenean et metus et purus luctus suscipit.`
     ],
   ],
   [
