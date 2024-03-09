@@ -29,7 +29,8 @@ const LEVEL_LAST = () => [
       {backgroundColor: 'rgb(150,150,150)', overflowY: 'scroll'},
       credits
     ]
-  ]
+  ],
+  ['button_back_to_menu', []],
 ]
 
 registerClass('credits_div', (...args) => {

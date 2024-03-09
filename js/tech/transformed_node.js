@@ -101,8 +101,9 @@ function createNodeWith(position, scale, rotation, alignment, component) {
   return result
 }
 
-function createButton(position, scale, rotation, alignment, text, onClick=undefined) {
+function createButton(position, scale, rotation, alignment, text, onClick=undefined, disabled=false) {
   const component = document.createElement('button')
+  component.disabled = disabled
   component.textContent = text
   onClick && (component.onclick = onClick)
 

@@ -94,4 +94,5 @@ const LEVEL1 = () => (controls.jump = '', [
       true,
     ]
   ],
+  ...controlSet,
 ])

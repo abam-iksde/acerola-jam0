@@ -49,15 +49,5 @@ const LEVEL3 = () => [
       vec2(96, 400-40),
     ]
   ],
-  [
-    'button',
-    [
-      vec2(1600-32, 32),
-      vec2(2, 2),
-      0,
-      {horizontal: 'end', vertical: 'start'},
-      'restart level',
-      reloadScene,
-    ]
-  ]
+  ...controlSet,
 ]

@@ -68,17 +68,7 @@ const LEVEL6 = () => [
       vec2(1600 - 64, 900 - 200)
     ]
   ],
-  [
-    'button',
-    [
-      vec2(1600-32, 32),
-      vec2(2, 2),
-      0,
-      {horizontal: 'end', vertical: 'start'},
-      'restart level',
-      reloadScene,
-    ]
-  ]
+  ...controlSet,
 ]
 
 registerClass('bridge', (position, ...args) => {

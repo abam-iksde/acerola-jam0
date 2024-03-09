@@ -152,9 +152,10 @@ const LEVEL_MEMORY = () => [
     ],
     'hint_label'
   ],
+  ...controlSet,
 ]
 
 const memoryHint = `
   You can use a paper sheet to take<br/>
-  not of the cards you've previously revealed!
+  note of the cards you've previously revealed!
 `

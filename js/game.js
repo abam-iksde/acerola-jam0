@@ -1,4 +1,5 @@
 const levels = [
+  LEVEL_MENU,
   LEVEL1,
   LEVEL2,
   LEVEL_MEMORY,
@@ -44,7 +45,12 @@ loadScene(() => [
   ['loadingLabel', [vec2(10, 10), vec2(3, 3), 0, {horizontal: 'start', vertical: 'start'}]]
 ])
 
-const [getLevelIndex, gotoNextLevel] = (() => {
+const [getLevelIndex, gotoLevel, gotoNextLevel] = (() => {
   let levelIndex = 0
-  return [(() => levelIndex), (() => loadScene(levels[++levelIndex]))]
+  let gotoLevel = ((index) => {
+    levelIndex = index
+    loadScene(levels[index])
+    levelsUnlocked[index] = true
+  })
+  return [(() => levelIndex), gotoLevel, () => gotoLevel(levelIndex+1)]
 })()

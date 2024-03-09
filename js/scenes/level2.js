@@ -129,4 +129,5 @@ const LEVEL2 = () => [
       true,
     ]
   ],
+  ...controlSet,
 ]

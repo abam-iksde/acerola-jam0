@@ -104,7 +104,8 @@ function LEVEL5() {
           wallGroupsEnabled.green = !checked
         }
       ]
-    ]
+    ],
+    ...controlSet,
   ]
 }
 

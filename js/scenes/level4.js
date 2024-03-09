@@ -49,7 +49,8 @@ const LEVEL4 = () => [
       vec2(0, 1600 - 64),
       0,
     ]
-  ]
+  ],
+  ...controlSet,
 ]
 
 registerClass('player_position_slider', (...args) => {
