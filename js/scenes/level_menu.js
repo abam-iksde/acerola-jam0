@@ -109,3 +109,4 @@ function LEVEL_MENU() {
 }
 
 let levelsUnlocked = {}
+// let levelsUnlocked = Array.from({length: 20}).fill(true)

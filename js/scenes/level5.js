@@ -82,6 +82,16 @@ function LEVEL5() {
     ],
 
     [
+      'styled_wall',
+      [
+        vec2(300, 0),
+        vec2(100, 400),
+        [0, 255, 0],
+        'green'
+      ]
+    ],
+
+    [
       'target',
       [
         vec2(64, 200),
