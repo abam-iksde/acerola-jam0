@@ -10,8 +10,12 @@ registerClass('player', (...args) => {
   player.vSpeed = 0
   player.onFloor = false
   player.movementAccumulator = vec2(0, 0)
+  player.disabled = false
   objRefs.player = player
   player.update = (delta) => {
+    if (player.disabled) {
+      return
+    }
     const horizontalInput = +isKeyDown(controls.right) - +isKeyDown(controls.left)
     const jumpInput = +isKeyDown(controls.jump)
 

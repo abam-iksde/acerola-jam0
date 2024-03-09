@@ -5,7 +5,8 @@ function LEVEL5() {
     [
       'background',
       [{
-        backgroundColor: 'rgb(50, 50, 50)',
+        backgroundImage: 'url("graphics/cubses.png")',
+        backgroundRepeat: 'repeat',
       }]
     ],
     
@@ -39,12 +40,59 @@ function LEVEL5() {
         'green'
       ]
     ],
+
+    [
+      'styled_wall',
+      [
+        vec2(1000,600),
+        vec2(600, 100),
+        [255, 0, 0],
+        'red'
+      ]
+    ],
+
+    [
+      'styled_wall',
+      [
+        vec2(700, 500),
+        vec2(600, 100),
+        [0, 255, 0],
+        'green'
+      ]
+    ],
+
+    [
+      'styled_wall',
+      [
+        vec2(0, 500),
+        vec2(400, 100),
+        [255, 0, 0],
+        'red'
+      ]
+    ],
+
+    [
+      'styled_wall',
+      [
+        vec2(0, 400),
+        vec2(400, 100),
+        [0, 255, 0],
+        'green'
+      ]
+    ],
+
+    [
+      'target',
+      [
+        vec2(64, 200),
+      ]
+    ],
     
     [
       'checkbox',
       [
-        vec2(64, 64),
-        vec2(2, 2),
+        vec2(1000, 80),
+        vec2(5, 5),
         0,
         {vertical: 'start', horizontal: 'start'},
         true,
@@ -100,6 +148,7 @@ registerClass('styled_wall', (position, size, color, group) => {
       }
       if (testCollision(position, size, player.position, vec2(64, 64))) {
         level5lost = true
+        player.disabled = true
         // PLAY DEATH SOUND
         setTimeout(reloadScene, 1000)
       }

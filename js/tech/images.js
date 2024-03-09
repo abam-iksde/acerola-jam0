@@ -29,6 +29,7 @@ const imageMap = {
   'platform': 'graphics/platform.png',
   'background_lv2': 'graphics/background_lv2.png',
   'level_slider': 'graphics/level_slider.png',
+  'cubes': 'graphics/cubses.png',
 }
 
 let images

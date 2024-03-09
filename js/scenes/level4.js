@@ -15,7 +15,7 @@ const LEVEL4 = () => [
       0,
       {vertical: 'start', horizontal: 'start'},
     ],
-    'player'
+    'player_'
   ],
   [
     'level4_walls',
@@ -55,7 +55,7 @@ const LEVEL4 = () => [
 registerClass('player_position_slider', (...args) => {
   const slider = createSlider(...args)
   slider.update = () => {
-    const { player } = objRefs
+    const player = objRefs['player_']
     if (!player) {
       return
     }
