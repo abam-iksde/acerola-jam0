@@ -6,6 +6,7 @@ const levels = [
   LEVEL4,
   LEVEL5,
   LEVEL6,
+  LEVEL_BIG_CHALLENGE,
   LEVEL_LAST,
 ]
 
