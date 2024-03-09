@@ -4,8 +4,8 @@ const controls = {
   right: 'ArrowRight',
 }
 
-registerClass('player', (...args) => {
-  const player = createImage(...args, 'player')
+registerClass('player', (position, scale, ...args) => {
+  const player = createImage(position, vec2(scale.x * (64/200), scale.y * (64/270)), ...args, 'player')
   const gravity = 512.0
   player.vSpeed = 0
   player.onFloor = false
@@ -30,6 +30,7 @@ registerClass('player', (...args) => {
 
     while (Math.abs(player.movementAccumulator.x) >= 1) {
       const signed = Math.sign(player.movementAccumulator.x)
+      player.component.src = signed > 0 ? imageMap.player : imageMap.player_left
       if (testWallCollision(vec2(position.x + signed, position.y), vec2(64, 64))) {
         player.movementAccumulator.x = 0
         break

@@ -28,6 +28,12 @@ function loadScene(scene) {
     }
     return result
   })
+
+  setTimeout(() => {
+    objects.forEach((object) => {
+      object._recalcTransform()
+    })
+  }, 100)
 }
 
 function reloadScene() {

@@ -94,7 +94,7 @@ function LEVEL_MENU() {
       ]
     ],
     [
-      'button',
+      'showdown_button',
       [
         vec2(1300, 700),
         vec2(3, 3),
@@ -105,8 +105,44 @@ function LEVEL_MENU() {
         !levelsUnlocked[8]
       ]
     ],
+    ['domdom_title', []]
   ]
 }
+
+registerClass('domdom_title', () => {
+  const label = createLabel(
+    vec2(32, 32),
+    vec2(4,4),
+    10,
+    {vertical: 'start', horizontal: 'start'},
+    'Dom in<br/>the land of DOM'
+  )
+
+  assignStyle(label.component, {
+    color: 'rgb(100, 100, 255)',
+  })
+
+  label.update = () => {
+    const time = performance.now()/1000
+    const sinTimePlus1 = Math.sin(time) + 1
+    label.scale = vec2(4 + sinTimePlus1*0.5, 4)
+    assignStyle(label.component, {
+      color: `rgb(${100 + 20*sinTimePlus1}, ${100 + 35*sinTimePlus1}, 255)`
+    })
+  }
+
+  return label
+})
+
+registerClass('showdown_button', (...args) => {
+  const button = createButton(...args)
+
+  assignStyle(button.component, {
+    color: 'red'
+  })
+
+  return button
+})
 
 let levelsUnlocked = {}
 // let levelsUnlocked = Array.from({length: 20}).fill(true)
