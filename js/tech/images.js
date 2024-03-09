@@ -31,6 +31,7 @@ const imageMap = {
   'level_slider': 'graphics/level_slider.png',
   'cubes': 'graphics/cubses.png',
   'water': 'graphics/background_credits.png',
+  'broken_bridge': 'graphics/broken_bridge.png',
 }
 
 let images

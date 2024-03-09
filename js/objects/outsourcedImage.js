@@ -3,6 +3,7 @@ registerClass('outsourcedImage', (...args) => {
   let src = textfield.component.value
   const result = createImageWithRawSource(...args, src)
   result.update = () => {
+    result._recalcTransform()
     if (textfield.component.value == src) {
       return
     }

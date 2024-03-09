@@ -129,10 +129,16 @@ function createImage(position, scale, rotation, alignment, image, onClick=undefi
   return createImageWithRawSource(position, scale, rotation, alignment, imageMap[image], onClick)
 }
 
-function createTextfield(position, scale, rotation, alignment, defaultValue, onChange=undefined, changeOnStart=false) {
+function createTextfield(position, scale, rotation, alignment, defaultValue, onChange=undefined, changeOnStart=false, width=undefined) {
   const component = document.createElement('input')
   component.type = 'text'
   component.value = defaultValue
+
+  if (width !== undefined) {
+    assignStyle(component, {
+      width: `${width}px`
+    })
+  }
 
   if (onChange) {
     component.onchange = (event) => onChange(event.target.value)

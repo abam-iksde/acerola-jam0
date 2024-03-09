@@ -5,6 +5,7 @@ const levels = [
   LEVEL3,
   LEVEL4,
   LEVEL5,
+  LEVEL6,
   LEVEL_LAST,
 ]
 
