@@ -30,6 +30,7 @@ const imageMap = {
   'background_lv2': 'graphics/background_lv2.png',
   'level_slider': 'graphics/level_slider.png',
   'cubes': 'graphics/cubses.png',
+  'water': 'graphics/background_credits.png',
 }
 
 let images

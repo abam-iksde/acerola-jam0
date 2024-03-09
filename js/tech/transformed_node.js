@@ -198,7 +198,7 @@ function createSlider(position, scale, rotation, alignment, valueRange, defaultV
   return createNodeWith(position, scale, rotation, alignment, component)
 }
 
-function createDiv(position, scale, rotation, alignment, size={}, style=vec2(64, 64), htmlContent='') {
+function createDiv(position, scale, rotation, alignment, size={}, style='', htmlContent='') {
   const component = document.createElement('div')
   assignStyle(component, {
     ...style,
