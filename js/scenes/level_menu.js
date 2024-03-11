@@ -105,7 +105,18 @@ function LEVEL_MENU() {
         !levelsUnlocked[8]
       ]
     ],
-    ['domdom_title', []]
+    ['domdom_title', []],
+    [
+      'button',
+      [
+        vec2(0, 900),
+        vec2(2.5, 2.5),
+        0,
+        {horizontal: 'start', vertical: 'end'},
+        'what?',
+        () => gotoLevel(10)
+      ]
+    ]
   ]
 }
 

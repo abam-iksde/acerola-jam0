@@ -9,6 +9,8 @@ const levels = [
   LEVEL6,
   LEVEL_BIG_CHALLENGE,
   LEVEL_LAST,
+
+  LEVEL_STORY,
 ]
 
 function loadingLabel(...args) {
