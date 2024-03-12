@@ -54,7 +54,7 @@ const LEVEL2 = () => [
       vec2(3, 3),
       0,
       {horizontal: 'start', vertical: 'start'},
-      'An entirely DOM based<br/>game.',
+      "Here's the game:",
       'white'
     ]
   ],
