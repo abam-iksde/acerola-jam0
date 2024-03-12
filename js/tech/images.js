@@ -13,8 +13,8 @@ async function loadImages(map) {
     }
   }, {})
 
-  for (const entry in Object.entries(promises)) {
-    promises[entry[0]] = await promises[entry[1]]
+  for (const entry of Object.entries(promises)) {
+    promises[entry[0]] = await entry[1]
   }
 
   return promises

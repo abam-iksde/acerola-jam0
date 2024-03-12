@@ -161,6 +161,7 @@ registerClass('styled_wall', (position, size, color, group) => {
         level5lost = true
         player.disabled = true
         // PLAY DEATH SOUND
+        playSound('death')
         setTimeout(reloadScene, 1000)
       }
     }

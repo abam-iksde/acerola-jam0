@@ -19,11 +19,18 @@ function loadingLabel(...args) {
     color: 'white'
   })
 
-  let loaded = false
+  let loadedImages = false
 
   loadImages(imageMap).then((result) => {
     images = result
-    loaded = true
+    loadedImages = true
+  })
+
+  let loadedSounds = false
+
+  loadSounds(soundMap).then((result) => {
+    sounds = result
+    loadedSounds = true
   })
 
   let animationState = 0
@@ -35,7 +42,13 @@ function loadingLabel(...args) {
   }, 100)
 
   label.update = () => {
-    loaded && canvasInitialized && (clearInterval(timer), loadScene(levels[0]))
+    if (loadedImages && loadedSounds && canvasInitialized) {
+      clearInterval(timer)
+      sounds.music.muted = true
+      sounds.music.loop = true
+      sounds.music.play()
+      loadScene(levels[0])
+    }
   }
 
   return label

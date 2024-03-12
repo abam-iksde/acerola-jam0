@@ -116,7 +116,16 @@ function LEVEL_MENU() {
         'what?',
         () => gotoLevel(10)
       ]
-    ]
+    ],
+    [
+      'button_music_on',
+      [
+        vec2(100, 300),
+        vec2(3, 3),
+        'music: on',
+        'music: off'
+      ]
+    ],
   ]
 }
 
