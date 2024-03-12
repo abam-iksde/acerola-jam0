@@ -26,7 +26,7 @@ const soundMap = {
   'button': 'sounds/button.wav',
   'next_level': 'sounds/coin.wav',
   'switch': 'sounds/switch.wav',
-  'jump': 'sounds/switch.wav',
+  'jump': 'sounds/jump.wav',
 }
 
 let sounds
