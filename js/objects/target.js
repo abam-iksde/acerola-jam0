@@ -12,6 +12,7 @@ registerClass('target', (position) => {
       vec2(target.position.x - 32, target.position.y - 32), vec2(64, 64),
       player.position, vec2(64, 64)
     )) {
+      playSound('next_level')
       gotoNextLevel()
     }
   }

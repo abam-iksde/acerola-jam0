@@ -22,6 +22,9 @@ async function loadSounds(map) {
 const soundMap = {
   'death': 'sounds/death.wav',
   'music': 'sounds/family2.wav',
+  'fall': 'sounds/fall.wav',
+  'button': 'sounds/button.wav',
+  'next_level': 'sounds/coin.wav',
 }
 
 let sounds

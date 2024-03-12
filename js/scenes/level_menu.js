@@ -18,7 +18,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '1. walk',
-        () => gotoLevel(1),
+        () => {
+          playSound('button')
+          gotoLevel(1)
+        },
       ]
     ],
     [
@@ -29,7 +32,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '2. jump',
-        () => gotoLevel(2),
+        () => {
+          playSound('button')
+          gotoLevel(2)
+        },
         !levelsUnlocked[2]
       ]
     ],
@@ -41,7 +47,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '3. memory',
-        () => gotoLevel(3),
+        () => {
+          playSound('button')
+          gotoLevel(3)
+        },
         !levelsUnlocked[3]
       ]
     ],
@@ -53,7 +62,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '4. text based adventure',
-        () => gotoLevel(4),
+        () => {
+          playSound('button')
+          gotoLevel(4)
+        },
         !levelsUnlocked[4]
       ]
     ],
@@ -65,7 +77,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '5. slide',
-        () => gotoLevel(5),
+        () => {
+          playSound('button')
+          gotoLevel(5)
+        },
         !levelsUnlocked[5]
       ]
     ],
@@ -77,7 +92,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '6. colored walls',
-        () => gotoLevel(6),
+        () => {
+          playSound('button')
+          gotoLevel(6)
+        },
         !levelsUnlocked[6]
       ]
     ],
@@ -89,7 +107,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '7. bridge',
-        () => gotoLevel(7),
+        () => {
+          playSound('button')
+          gotoLevel(7)
+        },
         !levelsUnlocked[7]
       ]
     ],
@@ -101,7 +122,10 @@ function LEVEL_MENU() {
         0,
         {vertical: 'start', horizontal: 'start'},
         '8. showdown',
-        () => gotoLevel(8),
+        () => {
+          playSound('button')
+          gotoLevel(8)
+        },
         !levelsUnlocked[8]
       ]
     ],
@@ -114,7 +138,10 @@ function LEVEL_MENU() {
         0,
         {horizontal: 'start', vertical: 'end'},
         'what?',
-        () => gotoLevel(10)
+        () => {
+          playSound('button')
+          gotoLevel(10)
+        },
       ]
     ],
     [

@@ -5,7 +5,10 @@ registerClass('button_back_to_menu', () => {
     0,
     {horizontal: 'end', vertical: 'start'},
     'QUIT TO MENU',
-    () => gotoLevel(0)
+    () => {
+      playSound('button')
+      gotoLevel(0)
+    }
   )
 })
 
@@ -16,7 +19,10 @@ registerClass('button_restart_level', () => {
     0,
     {horizontal: 'end', vertical: 'start'},
     'RESTART LEVEL',
-    reloadScene
+    () => {
+      playSound('button')
+      reloadScene()
+    }
   )
 
   assignStyle(button.component, {

@@ -46,7 +46,6 @@ function loadingLabel(...args) {
       clearInterval(timer)
       sounds.music.muted = true
       sounds.music.loop = true
-      sounds.music.play()
       loadScene(levels[0])
     }
   }

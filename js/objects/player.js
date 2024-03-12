@@ -71,6 +71,7 @@ registerClass('player', (position, scale, ...args) => {
     }
 
     if (player.position.y > 900) {
+      playSound('fall')
       reloadScene()
     }
   }
