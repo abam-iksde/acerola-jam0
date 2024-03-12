@@ -33,10 +33,10 @@ const LEVEL6 = () => [
       vec2(3, 3),
       0,
       {horizontal: 'start', vertical: 'start'},
-      'graphics/broken_bridge.png',
+      'https://img.itch.zone/aW1nLzE1MzU4MTQ4LnBuZw==/original/9zFX9q.png',
       undefined,
       undefined,
-      300
+      500
     ],
     'imagepath'
   ],
