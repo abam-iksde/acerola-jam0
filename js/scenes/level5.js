@@ -97,6 +97,17 @@ function LEVEL5() {
         vec2(64, 200),
       ]
     ],
+
+    [
+      'image',
+      [
+        vec2(1000, 140),
+        vec2(1.5, 1.5),
+        0,
+        {vertical: 'start', horizontal: 'end'},
+        'arrow'
+      ]
+    ],
     
     [
       'checkbox',
@@ -110,6 +121,7 @@ function LEVEL5() {
           if (level5lost) {
             return
           }
+          playSound('switch')
           wallGroupsEnabled.red = checked
           wallGroupsEnabled.green = !checked
         }

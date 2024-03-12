@@ -37,6 +37,7 @@ const imageMap = {
   'redcubes': 'graphics/red_cubes.png',
   'menu_background': 'graphics/menu_background.png',
   'crack': 'graphics/crack.png',
+  'arrow': 'graphics/arrow.png',
 }
 
 let images

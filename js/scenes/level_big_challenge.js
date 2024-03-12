@@ -56,7 +56,7 @@ const LEVEL_BIG_CHALLENGE = () => {
     [
       'textarea_wall',
       [
-        vec2(32, 450),
+        vec2(32, 465),
         vec2(2, 2),
         0,
         { horizontal: 'start', vertical: 'start' },
@@ -116,6 +116,7 @@ const LEVEL_BIG_CHALLENGE = () => {
           if (level5lost) {
             return
           }
+          playSound('switch')
           wallGroupsEnabled.red = checked
           wallGroupsEnabled.green = !checked
         }

@@ -25,6 +25,7 @@ const soundMap = {
   'fall': 'sounds/fall.wav',
   'button': 'sounds/button.wav',
   'next_level': 'sounds/coin.wav',
+  'switch': 'sounds/switch.wav',
 }
 
 let sounds
