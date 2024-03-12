@@ -39,6 +39,6 @@ function LEVEL_STORY() {
 
 const storyContent = `
   <span style="font-size: 32px;">
-    Help Dom as he fearlessly traverses the DOM in order to save his family.
+    Help Dominic Torpedo as he fearlessly traverses the DOM in order to save his family.
   </span>
 `

@@ -19,6 +19,16 @@ const LEVEL_LAST = () => [
     ]
   ],
   [
+    'image',
+    [
+      vec2(800, 550),
+      vec2(1, 1),
+      0,
+      {horizontal: 'center', vertical: 'start'},
+      'torpedo_family',
+    ]
+  ],
+  [
     'credits_div',
     [
       vec2(800, 450),

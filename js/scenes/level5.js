@@ -55,7 +55,7 @@ function LEVEL5() {
       'styled_wall',
       [
         vec2(700, 500),
-        vec2(600, 100),
+        vec2(600, 50),
         [0, 255, 0],
         'green'
       ]

@@ -38,6 +38,7 @@ const imageMap = {
   'menu_background': 'graphics/menu_background.png',
   'crack': 'graphics/crack.png',
   'arrow': 'graphics/arrow.png',
+  'torpedo_family': 'graphics/torpedo_family.png',
 }
 
 let images

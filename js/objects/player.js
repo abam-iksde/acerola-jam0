@@ -68,6 +68,9 @@ registerClass('player', (position, scale, ...args) => {
 
     if (player.onFloor) {
       player.vSpeed = -400 * +jumpInput
+      if (jumpInput) {
+        playSound('jump')
+      }
     }
 
     if (player.position.y > 900) {
