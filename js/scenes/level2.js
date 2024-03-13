@@ -127,7 +127,38 @@ const LEVEL2 = () => [
       controls.jump,
       (value) => controls.jump = value,
       true,
-    ]
+    ],
   ],
+  ['controls_warning_label', []],
   ...controlSet,
 ]
+
+registerClass('controls_warning_label', () => {
+  const label = createLabel(vec2(820, 260),vec2(0, 0),0, {horizontal: 'start', vertical: 'start'}, `
+    "Space" and "Enter" are not recommended as they<br/>
+    can also be used for triggering "onclick" events :)
+  `)
+  let shown = false
+
+  assignStyle(label.component, {
+    color: 'rgb(255, 150, 150)'
+  })
+
+  label.update = () => {
+    const isSpaceOrEnter = Object.values(controls).some(
+      (key) => ['space', 'enter', ' '].includes(trimKey(key).toLowerCase())
+    )
+    if (!shown && isSpaceOrEnter) {
+      label.scale = vec2(2, 2)
+      shown = true
+      return
+    }
+
+    if (!isSpaceOrEnter) {
+      label.scale = vec2(0, 0)
+      shown = false
+    }
+  }
+
+  return label
+})

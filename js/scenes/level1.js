@@ -94,5 +94,6 @@ const LEVEL1 = () => [
       true,
     ]
   ],
+  ['controls_warning_label', []],
   ...controlSet,
 ]
