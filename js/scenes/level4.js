@@ -73,8 +73,9 @@ registerClass('level4_walls', (...args) => {
     {position: vec2(538, 678), size: vec2(67, 67)},
     {position: vec2(815, 678), size: vec2(67, 67)},
     {position: vec2(815, 0), size: vec2(67, 562)},
-    {position: vec2(980, 544), size: vec2(67, 268)},
-    {position: vec2(980, 745), size: vec2(620, 67)},
+    {position: vec2(1047, 544), size: vec2(67, 268)},
+    {position: vec2(1047, 745), size: vec2(620, 67)},
+    {position: vec2(882, 678), size: vec2(67, 67)},
   )
   return createImage(...args)
 })
