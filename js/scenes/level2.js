@@ -100,7 +100,7 @@ const LEVEL2 = () => [
       vec2(2, 2),
       0,
       {horizontal: 'start', vertical: 'start'},
-      'ArrowLeft',
+      controls.left,
       (value) => controls.left = value,
       true,
     ]
@@ -112,7 +112,7 @@ const LEVEL2 = () => [
       vec2(2, 2),
       0,
       {horizontal: 'start', vertical: 'start'},
-      'ArrowRight',
+      controls.right,
       (value) => controls.right = value,
       true,
     ]
@@ -124,7 +124,7 @@ const LEVEL2 = () => [
       vec2(2, 2),
       0,
       {horizontal: 'start', vertical: 'start'},
-      '',
+      controls.jump,
       (value) => controls.jump = value,
       true,
     ]

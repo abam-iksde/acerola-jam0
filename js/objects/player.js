@@ -1,5 +1,5 @@
 const controls = {
-  jump: 'ArrowUp',
+  jump: '',
   left: 'ArrowLeft',
   right: 'ArrowRight',
 }

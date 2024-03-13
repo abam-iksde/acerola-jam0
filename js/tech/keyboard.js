@@ -1,14 +1,24 @@
 const isKeyDown = (() => {
   const keysDown = {}
 
+  function trim(str) {
+    if (str === ' ') {
+      return str
+    }
+    return str.trim()
+  }
+
   window.addEventListener('keydown', (event) => {
-    keysDown[event.key] = true
+    keysDown[trim(event.key).toLowerCase()] = true
   })
   window.addEventListener('keyup', (event) => {
-    keysDown[event.key] = false
+    keysDown[trim(event.key).toLowerCase()] = false
   })
 
   return (key) => {
-    return !!keysDown[key]
+    if (trim(key).toLowerCase() === 'space') [
+      key = ' '
+    ]
+    return !!keysDown[trim(key).toLowerCase()]
   }
 })()
